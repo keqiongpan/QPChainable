@@ -66,9 +66,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		1BEED82422A7C2C8001CDBC0 /* QPChainable */ = {
+		1BEED82422A7C2C8001CDBC0 /* QPChainable-iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1BEED82D22A7C2C8001CDBC0 /* Build configuration list for PBXNativeTarget "QPChainable" */;
+			buildConfigurationList = 1BEED82D22A7C2C8001CDBC0 /* Build configuration list for PBXNativeTarget "QPChainable-iOS" */;
 			buildPhases = (
 				1BEED82022A7C2C8001CDBC0 /* Headers */,
 				1BEED82122A7C2C8001CDBC0 /* Sources */,
@@ -79,7 +79,7 @@
 			);
 			dependencies = (
 			);
-			name = QPChainable;
+			name = "QPChainable-iOS";
 			productName = QPChainable;
 			productReference = 1BEED82522A7C2C8001CDBC0 /* QPChainable.framework */;
 			productType = "com.apple.product-type.framework";
@@ -110,7 +110,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				1BEED82422A7C2C8001CDBC0 /* QPChainable */,
+				1BEED82422A7C2C8001CDBC0 /* QPChainable-iOS */,
 			);
 		};
 /* End PBXProject section */
@@ -192,6 +192,7 @@
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = QPChainable;
 				SDKROOT = iphoneos;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -247,6 +248,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = QPChainable;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -271,7 +273,6 @@
 					"@loader_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = io.github.keqiongpan.QPChainable;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -294,7 +295,6 @@
 					"@loader_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = io.github.keqiongpan.QPChainable;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -312,7 +312,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1BEED82D22A7C2C8001CDBC0 /* Build configuration list for PBXNativeTarget "QPChainable" */ = {
+		1BEED82D22A7C2C8001CDBC0 /* Build configuration list for PBXNativeTarget "QPChainable-iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1BEED82E22A7C2C8001CDBC0 /* Debug */,
