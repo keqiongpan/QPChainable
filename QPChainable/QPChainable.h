@@ -8,14 +8,6 @@
 
 #import <Foundation/Foundation.h>
 
-//! Project version number for QPChainable.
-FOUNDATION_EXPORT double QPChainableVersionNumber;
-
-//! Project version string for QPChainable.
-FOUNDATION_EXPORT const unsigned char QPChainableVersionString[];
-
-// In this header, you should import all the public headers of your framework using statements like #import <QPChainable/PublicHeader.h>
-
 
 #pragma mark - QPChainableDeclare(name, arguments[, returntype])
 
@@ -30,8 +22,8 @@ FOUNDATION_EXPORT const unsigned char QPChainableVersionString[];
  *  @example 使用示例，如下：
  *      \@interface QPPacketMaker : NSObject
  *      - QPChainableDeclare(length, (void), NSUInteger);
- *      - QPChainableDeclare(append, (QPMultipartData *data));
- *      - QPChainableDeclare(send, (void));
+ *      - QPChainableDeclare(append, (QPMultipartData *data), QPPacketMaker *);
+ *      - QPChainableDeclare(send, (void), QPPacketMaker *);
  *      \@end
  *
  *  @note 注意， returntype 一般为当前链式表达式函数声明所在类的实例类型。如果要
