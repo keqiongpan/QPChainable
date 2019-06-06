@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
 #   * Write the description between the DESC delimiters below.
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
-  s.description      = 'Provides an easy way to construct chained expressions for Cbjective-C.'
+  # s.description      = 'Provides an easy way to construct chained expressions for Cbjective-C.'
 
   s.homepage         = 'https://github.com/keqiongpan/QPChainable'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
@@ -29,13 +29,13 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '8.0'
   s.osx.deployment_target = '10.8'
 
-  s.source_files = 'QPChainable/**/*.m'
+  s.source_files = 'QPChainable'
 
   # s.resource_bundles = {
   #   'QPChainable' => ['QPChainable/Assets/*.png']
   # }
 
   s.public_header_files = 'QPChainable/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
+  s.frameworks = 'Foundation'
   # s.dependency 'AFNetworking', '~> 2.3'
 end
