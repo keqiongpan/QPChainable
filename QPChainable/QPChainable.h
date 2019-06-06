@@ -22,8 +22,8 @@
  *  @example 使用示例，如下：
  *      \@interface QPPacketMaker : NSObject
  *      - QPChainableDeclare(length, (void), NSUInteger);
- *      - QPChainableDeclare(append, (QPMultipartData *data), QPPacketMaker *);
- *      - QPChainableDeclare(send, (void), QPPacketMaker *);
+ *      - QPChainableDeclare(append, (QPMultipartData *data));
+ *      - QPChainableDeclare(send, (void));
  *      \@end
  *
  *  @note 注意， returntype 一般为当前链式表达式函数声明所在类的实例类型。如果要
@@ -80,11 +80,11 @@
  *  @param arguments    函数的形参列表，需要使用`()'括起来。
  *                      如果没有参数，可使用`(void)'来表示。
  *  @param returntype   函数的返回值类型，可选参数，默认为intancetype。
- *  @param body         函数的实现体，使用`QPChainableBody({})'括起来。
+ *  @param body         函数的实现体，使用`({'和`})'括起来。
  *
  *  @example 使用示例，如下：
  *      \@implementation QPPacketMaker
- *      - QPChainableImplementation(length, (void), NSUInteger, QPChainableBody({
+ *      - QPChainableImplementation(length, (void), NSUInteger, ({
  *          return self.data.length;
  *      }));
  *      \@end
@@ -101,7 +101,7 @@
 /**/    (id (^) arguments)name { \
 /**/        return ^id arguments { \
 /**/            do { \
-/**/                _You_need_wrap_the_implementation_body_with_QPChainableBody_##body; \
+/**/                _You_need_wrap_the_implementation_body_with_parentheses_ body; \
 /**/            } while (0); \
 /**/            return self; \
 /**/        }; \
@@ -110,16 +110,14 @@
 #define _QPChainableImplementation_supports_only_3_or_4_arguments_N4(name, arguments, returntype, body, ...) \
 /**/    (returntype (^) arguments)name { \
 /**/        return ^returntype arguments { \
-/**/            do { \
-/**/                _You_need_wrap_the_implementation_body_with_QPChainableBody_##body; \
-/**/            } while (0); \
+/**/            _You_need_wrap_the_implementation_body_with_parentheses_ body; \
 /**/        }; \
 /**/    }
 
 #endif
 
 
-#pragma mark - QPChainableBody({ ... do something here ... })
+#pragma mark - ({ ... do something here ... })
 
 /**
  *  与QPChainableImplementation搭配使用，将函数体括起来。主要是方便预编译程序将
@@ -130,14 +128,9 @@
  *
  *  @see QPChainableImplementation
  */
-#ifndef QPChainableBody
-
-#define QPChainableBody(...) \
-/**/    _QPChainableBody_internal(__VA_ARGS__)
-
-#define _You_need_wrap_the_implementation_body_with_QPChainableBody__QPChainableBody_internal(...) \
+#ifndef _You_need_wrap_the_implementation_body_with_parentheses_
+#define _You_need_wrap_the_implementation_body_with_parentheses_(...) \
 /**/    __VA_ARGS__
-
 #endif
 
 
