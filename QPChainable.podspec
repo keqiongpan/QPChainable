@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'QPChainable'
-  s.version          = '0.1.0'
+  s.version          = '0.2.0'
   s.summary          = 'Provides an easy way to construct chained expressions for Cbjective-C.'
 
 # This description is used to generate tags and improve search results.
