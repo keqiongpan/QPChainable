@@ -17,7 +17,7 @@
  *  @param name         函数名，表示链式表达式中的一个操作。
  *  @param arguments    函数的形参列表，需要使用`()'括起来。
  *                      如果没有参数，可使用`(void)'来表示。
- *  @param returntype   函数的返回值类型，可选参数，默认为intancetype。
+ *  @param returntype   函数的返回值类型，可选参数，默认为instancetype。
  *
  *  @example 使用示例，如下：
  *      \@interface QPPacketMaker : NSObject
@@ -57,15 +57,15 @@
 #ifndef QPChainableDeclare
 
 #define QPChainableDeclare(... /* name, arguments[, returntype] */) \
-/**/    _QPChainableDecalre_internal(__VA_ARGS__, N3, N2, N1)
+/**/    _QPChainableDeclare_internal(__VA_ARGS__, N3, N2, N1)
 
-#define _QPChainableDecalre_internal(v1, v2, v3, suffix, ...) \
-/**/    _QPChainableDecalre_supports_only_2_or_3_arguments_##suffix(v1, v2, v3)
+#define _QPChainableDeclare_internal(v1, v2, v3, suffix, ...) \
+/**/    _QPChainableDeclare_supports_only_2_or_3_arguments_##suffix(v1, v2, v3)
 
-#define _QPChainableDecalre_supports_only_2_or_3_arguments_N2(name, arguments, ...) \
+#define _QPChainableDeclare_supports_only_2_or_3_arguments_N2(name, arguments, ...) \
 /**/    (instancetype (^) arguments)name
 
-#define _QPChainableDecalre_supports_only_2_or_3_arguments_N3(name, arguments, returntype, ...) \
+#define _QPChainableDeclare_supports_only_2_or_3_arguments_N3(name, arguments, returntype, ...) \
 /**/    (returntype (^) arguments)name
 
 #endif
@@ -79,7 +79,7 @@
  *  @param name         函数名，表示链式表达式中的一个操作。
  *  @param arguments    函数的形参列表，需要使用`()'括起来。
  *                      如果没有参数，可使用`(void)'来表示。
- *  @param returntype   函数的返回值类型，可选参数，默认为intancetype。
+ *  @param returntype   函数的返回值类型，可选参数，默认为instancetype。
  *  @param body         函数的实现体，使用`({'和`})'括起来。
  *
  *  @example 使用示例，如下：
