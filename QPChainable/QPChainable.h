@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 
-#pragma mark - QPChainableDeclare(name, arguments[, returntype])
+#pragma mark - QP_CHAINABLE_DECLARE(name, arguments[, returntype])
 
 /**
  *  在类声明体中添加支持链式表达式的成员函数。
@@ -21,9 +21,9 @@
  *
  *  @example 使用示例，如下：
  *      \@interface QPPacketMaker : NSObject
- *      - QPChainableDeclare(length, (void), NSUInteger);
- *      - QPChainableDeclare(append, (QPMultipartData *data));
- *      - QPChainableDeclare(send, (void));
+ *      - QP_CHAINABLE_DECLARE(length, (void), NSUInteger);
+ *      - QP_CHAINABLE_DECLARE(append, (QPMultipartData *data), QPPacketMaker *);
+ *      - QP_CHAINABLE_DECLARE(send, (void), QPPacketMaker *);
  *      \@end
  *
  *  @note 注意， returntype 一般为当前链式表达式函数声明所在类的实例类型。如果要
@@ -41,11 +41,11 @@
  *      详细示例如下：
  *
  *      \@interface QPConcreteBase<instancetype> : NSObject
- *      - QPChainableDeclare(setValue, (id value));
+ *      - QP_CHAINABLE_DECLARE(setValue, (id value));
  *      \@end
  *
  *      \@interface QPConcreteChild<instancetype> : QPConcreteBase<instancetype>
- *      - QPChainableDeclare(dump, (void));
+ *      - QP_CHAINABLE_DECLARE(dump, (void));
  *      \@end
  *
  *      \@class QPChild;
@@ -54,24 +54,24 @@
  *
  *      QPChild.new.setValue(...).dump();
  */
-#ifndef QPChainableDeclare
+#ifndef QP_CHAINABLE_DECLARE
 
-#define QPChainableDeclare(... /* name, arguments[, returntype] */) \
-/**/    _QPChainableDeclare_internal(__VA_ARGS__, N3, N2, N1)
+#define QP_CHAINABLE_DECLARE(... /* name, arguments[, returntype] */) \
+/**/    _QP_CHAINABLE_DECLARE_internal(__VA_ARGS__, N3, N2, N1)
 
-#define _QPChainableDeclare_internal(v1, v2, v3, suffix, ...) \
-/**/    _QPChainableDeclare_supports_only_2_or_3_arguments_##suffix(v1, v2, v3)
+#define _QP_CHAINABLE_DECLARE_internal(v1, v2, v3, suffix, ...) \
+/**/    _QP_CHAINABLE_DECLARE_supports_only_2_or_3_arguments_##suffix(v1, v2, v3)
 
-#define _QPChainableDeclare_supports_only_2_or_3_arguments_N2(name, arguments, ...) \
+#define _QP_CHAINABLE_DECLARE_supports_only_2_or_3_arguments_N2(name, arguments, ...) \
 /**/    (instancetype (^) arguments)name
 
-#define _QPChainableDeclare_supports_only_2_or_3_arguments_N3(name, arguments, returntype, ...) \
+#define _QP_CHAINABLE_DECLARE_supports_only_2_or_3_arguments_N3(name, arguments, returntype, ...) \
 /**/    (returntype (^) arguments)name
 
 #endif
 
 
-#pragma mark - QPChainableImplementation(name, arguments[, returntype], body)
+#pragma mark - QP_CHAINABLE_IMPLEMENTATION(name, arguments[, returntype], body)
 
 /**
  *  在类实现体中添加支持链式表达式的成员函数。
@@ -84,20 +84,20 @@
  *
  *  @example 使用示例，如下：
  *      \@implementation QPPacketMaker
- *      - QPChainableImplementation(length, (void), NSUInteger, ({
+ *      - QP_CHAINABLE_IMPLEMENTATION(length, (void), NSUInteger, ({
  *          return self.data.length;
  *      }));
  *      \@end
  */
-#ifndef QPChainableImplementation
+#ifndef QP_CHAINABLE_IMPLEMENTATION
 
-#define QPChainableImplementation(... /* name, arguments[, returntype], body */) \
-/**/    _QPChainableImplementation_internal(__VA_ARGS__, N4, N3, N2, N1)
+#define QP_CHAINABLE_IMPLEMENTATION(... /* name, arguments[, returntype], body */) \
+/**/    _QP_CHAINABLE_IMPLEMENTATION_internal(__VA_ARGS__, N4, N3, N2, N1)
 
-#define _QPChainableImplementation_internal(v1, v2, v3, v4, suffix, ...) \
-/**/    _QPChainableImplementation_supports_only_3_or_4_arguments_##suffix(v1, v2, v3, v4)
+#define _QP_CHAINABLE_IMPLEMENTATION_internal(v1, v2, v3, v4, suffix, ...) \
+/**/    _QP_CHAINABLE_IMPLEMENTATION_supports_only_3_or_4_arguments_##suffix(v1, v2, v3, v4)
 
-#define _QPChainableImplementation_supports_only_3_or_4_arguments_N3(name, arguments, body, ...) \
+#define _QP_CHAINABLE_IMPLEMENTATION_supports_only_3_or_4_arguments_N3(name, arguments, body, ...) \
 /**/    (id (^) arguments)name { \
 /**/        return ^id arguments { \
 /**/            do { \
@@ -107,7 +107,7 @@
 /**/        }; \
 /**/    }
 
-#define _QPChainableImplementation_supports_only_3_or_4_arguments_N4(name, arguments, returntype, body, ...) \
+#define _QP_CHAINABLE_IMPLEMENTATION_supports_only_3_or_4_arguments_N4(name, arguments, returntype, body, ...) \
 /**/    (returntype (^) arguments)name { \
 /**/        return ^returntype arguments { \
 /**/            _You_need_wrap_the_implementation_body_with_parentheses_ body; \
@@ -120,13 +120,13 @@
 #pragma mark - ({ ... do something here ... })
 
 /**
- *  与QPChainableImplementation搭配使用，将函数体括起来。主要是方便预编译程序将
- *  其识别为一个整体的参数值传递给宏函数内部，避免因代码中的英文逗号“,”被识别
- *  为宏函数的多个参数值。
+ *  与QP_CHAINABLE_IMPLEMENTATION搭配使用，将函数体括起来。主要是方便预编译程序
+ *  将其识别为一个整体的参数值传递给宏函数内部，避免因代码中的英文逗号“,”被识
+ *  别为宏函数的多个参数值。
  *
  *  @param ...  可以是单条语句，或用花括号`{}'括起来的语句块。
  *
- *  @see QPChainableImplementation
+ *  @see QP_CHAINABLE_IMPLEMENTATION
  */
 #ifndef _You_need_wrap_the_implementation_body_with_parentheses_
 #define _You_need_wrap_the_implementation_body_with_parentheses_(...) \
@@ -134,7 +134,7 @@
 #endif
 
 
-#pragma mark - QPChainableProxySubclassDeclare(subclass, superclass)
+#pragma mark - QP_CHAINABLE_PROXYSUBCLASS_DECLARE(subclass, superclass)
 
 /**
  *  声明代理子类（Proxy Subclass）。代理子类主要是为了去掉父类中的泛型参数，并将
@@ -142,10 +142,10 @@
  *  能返回这个代理子类的实例类型，继而支持混用。所以，代理子类主要是面向最终使用
  *  者的、非泛型的、无成员（方法、属性、实例变量等）的和不可被继承的类。
  *
- *  @see QPChainableDeclare, QPChainableProxySubclassImplementation
+ *  @see QP_CHAINABLE_DECLARE, QP_CHAINABLE_PROXYSUBCLASS_IMPLEMENTATION
  */
-#ifndef QPChainableProxySubclassDeclare
-#define QPChainableProxySubclassDeclare(subclass, superclass) \
+#ifndef QP_CHAINABLE_PROXYSUBCLASS_DECLARE
+#define QP_CHAINABLE_PROXYSUBCLASS_DECLARE(subclass, superclass) \
 /**/    @class subclass; \
 /**/    @interface superclass (QPChainable) \
 /**/    - (subclass *)make; \
@@ -155,15 +155,15 @@
 #endif
 
 
-#pragma mark - QPChainableProxySubclassImplementation(subclass, superclass)
+#pragma mark - QP_CHAINABLE_PROXYSUBCLASS_IMPLEMENTATION(subclass, superclass)
 
 /**
  *  实现代理子类（Proxy Subclass）。
  *
- *  @see QPChainableDeclare, QPChainableProxySubclassDeclare
+ *  @see QP_CHAINABLE_DECLARE, QP_CHAINABLE_PROXYSUBCLASS_DECLARE
  */
-#ifndef QPChainableProxySubclassImplementation
-#define QPChainableProxySubclassImplementation(subclass, superclass) \
+#ifndef QP_CHAINABLE_PROXYSUBCLASS_IMPLEMENTATION
+#define QP_CHAINABLE_PROXYSUBCLASS_IMPLEMENTATION(subclass, superclass) \
 /**/    @implementation superclass (QPChainable) \
 /**/    - (subclass *)make { \
 /**/        return (subclass *)self; \
@@ -185,8 +185,8 @@
  *
  *      #define members(...) \
  *              membersFromArray(QPChainableArray(NSString *, __VA_ARGS__))
- *      - QPChainableDeclare(members, (void *__FOR_CODE_HINT_ONLY__));
- *      - QPChainableDeclare(membersFromArray, (NSArray<NSString *> *));
+ *      - QP_CHAINABLE_DECLARE(members, (void *__FOR_CODE_HINT_ONLY__));
+ *      - QP_CHAINABLE_DECLARE(membersFromArray, (NSArray<NSString *> *));
  *
  *      unsc.permanent.members({
  *          @"中国",
@@ -217,8 +217,8 @@
  *
  *      #define members(...) \
  *              membersFromDictionary(QPChainableDictionary(NSString *, NSString *, __VA_ARGS__))
- *      - QPChainableDeclare(members, (void *__FOR_CODE_HINT_ONLY__));
- *      - QPChainableDeclare(membersFromDictionary, (NSDictionary<NSString *, NSString *> *));
+ *      - QP_CHAINABLE_DECLARE(members, (void *_FOR_CODE_HINT_ONLY_));
+ *      - QP_CHAINABLE_DECLARE(membersFromDictionary, (NSDictionary<NSString *, NSString *> *));
  *
  *      unsc.permanent.members({
  *          @"CN" : @"中国",
