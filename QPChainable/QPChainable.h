@@ -31,12 +31,12 @@
  *      父类均改造为泛型类，并将面向最终使用者的实例类型通过泛型参数传递给子类和
  *      父类，子类和父类均使用该实例类型作为链式表达式函数的返回值类型，在函数实
  *      现时将self返回即可。然后为子类或父类实现面向最终使用者的、非泛型的、无成
- *      员（方法、属性、实例变量等）的、不可被继承的代理子类（Proxy Subclass），
- *      并将其基类的泛型参数声明为该代理子类的实例类型。这样，原来子类与父类实现
- *      的链式表达式函数就可以进行混用了，并且这些链式表达式函数也能被后代子类继
- *      续继承。但需要注意到，这样处理之后，在类的继承体系上会多出一些无成员的、
- *      不可被继承的代理子类，但由于没有额外的成员（方法、属性、实例变量等），在
- *      理论上是可以将父类实例指针强制转换为代理子类实例指针使用的。
+ *      员（方法、属性、实例变量等）的装饰子类（Decorator Subclass），并将其基类
+ *      的泛型形参指定为该装饰子类的实例类型。这样，原来子类与父类实现的链式表达
+ *      式函数就可以进行混用了，并且这些链式表达式函数也能被后代子类继续继承。但
+ *      需要注意到，这样处理之后，在类的继承体系上会多出一些无成员的装饰子类，但
+ *      由于没有额外的成员（方法、属性、实例变量等），在理论上是可以将父类实例指
+ *      针强制转换为装饰子类实例指针使用的。
  *
  *      详细示例如下：
  *
@@ -134,42 +134,44 @@
 #endif
 
 
-#pragma mark - QP_CHAINABLE_PROXYSUBCLASS_DECLARE(subclass, superclass)
+#pragma mark - QP_CHAINABLE_DECORATOR_DECLARE(decoratorclass, concreteclass)
 
 /**
- *  声明代理子类（Proxy Subclass）。代理子类主要是为了去掉父类中的泛型参数，并将
- *  自身的实例类型传递给父类及其祖先类使用，使得从这些类中继承的链式表达式函数都
- *  能返回这个代理子类的实例类型，继而支持混用。所以，代理子类主要是面向最终使用
- *  者的、非泛型的、无成员（方法、属性、实例变量等）的和不可被继承的类。
+ *  声明装饰子类（Decorator Subclass）。装饰子类主要是为了去掉父类中的泛型参数，
+ *  并将自身的实例类型传递给父类及其祖先类使用，使得从这些类中定义的链式表达式函
+ *  数都能返回这个装饰子类的实例类型，继而支持混用。所以，装饰子类主要是面向最终
+ *  使用者的、非泛型的、无成员（方法、属性、实例变量等）的类。
  *
- *  @see QP_CHAINABLE_DECLARE, QP_CHAINABLE_PROXYSUBCLASS_IMPLEMENTATION
+ *  @see QP_CHAINABLE_DECLARE, QP_CHAINABLE_DECORATOR_IMPLEMENTATION
  */
-#ifndef QP_CHAINABLE_PROXYSUBCLASS_DECLARE
-#define QP_CHAINABLE_PROXYSUBCLASS_DECLARE(subclass, superclass) \
-/**/    @class subclass; \
-/**/    @interface superclass (QPChainable) \
-/**/    - (subclass *)make; \
+#ifndef QP_CHAINABLE_DECORATOR_DECLARE
+#define QP_CHAINABLE_DECORATOR_DECLARE(decoratorclass, concreteclass) \
+/**/    @class decoratorclass; \
+/**/    @interface concreteclass (QPChainable) \
+/**/    - (decoratorclass *)make; \
 /**/    @end \
-/**/    @interface subclass : superclass<subclass *> \
+/**/    @interface decoratorclass : concreteclass<decoratorclass *> \
 /**/    @end
 #endif
 
 
-#pragma mark - QP_CHAINABLE_PROXYSUBCLASS_IMPLEMENTATION(subclass, superclass)
+#pragma mark - QP_CHAINABLE_DECORATOR_IMPLEMENTATION(decoratorclass, concreteclass)
 
 /**
- *  实现代理子类（Proxy Subclass）。
+ *  实现装饰子类（Decorator Subclass），同时为具体类（Concrete Class）添加一个返
+ *  回装饰子类指针的方法make。使得当前对象无论是装饰子类或具体类，都可以通过调用
+ *  make方法来启动链式表达式。
  *
- *  @see QP_CHAINABLE_DECLARE, QP_CHAINABLE_PROXYSUBCLASS_DECLARE
+ *  @see QP_CHAINABLE_DECLARE, QP_CHAINABLE_DECORATOR_DECLARE
  */
-#ifndef QP_CHAINABLE_PROXYSUBCLASS_IMPLEMENTATION
-#define QP_CHAINABLE_PROXYSUBCLASS_IMPLEMENTATION(subclass, superclass) \
-/**/    @implementation superclass (QPChainable) \
-/**/    - (subclass *)make { \
-/**/        return (subclass *)self; \
+#ifndef QP_CHAINABLE_DECORATOR_IMPLEMENTATION
+#define QP_CHAINABLE_DECORATOR_IMPLEMENTATION(decoratorclass, concreteclass) \
+/**/    @implementation concreteclass (QPChainable) \
+/**/    - (decoratorclass *)make { \
+/**/        return (decoratorclass *)self; \
 /**/    } \
 /**/    @end \
-/**/    @implementation subclass \
+/**/    @implementation decoratorclass \
 /**/    @end
 #endif
 
