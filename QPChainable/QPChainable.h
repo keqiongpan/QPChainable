@@ -187,7 +187,7 @@
  *
  *      #define members(...) \
  *              membersFromArray(QPChainableArray(NSString *, __VA_ARGS__))
- *      - QP_CHAINABLE_DECLARE(members, (void *__FOR_CODE_HINT_ONLY__));
+ *      - QP_CHAINABLE_DECLARE(members, (void *_FOR_CODE_HINT_ONLY_));
  *      - QP_CHAINABLE_DECLARE(membersFromArray, (NSArray<NSString *> *));
  *
  *      unsc.permanent.members({
