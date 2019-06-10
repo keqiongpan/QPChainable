@@ -474,7 +474,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = io.github.keqiongpan.QPChainable;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -497,7 +496,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = io.github.keqiongpan.QPChainable;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -520,7 +518,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = io.github.keqiongpan.QPChainable;
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -543,7 +540,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = io.github.keqiongpan.QPChainable;
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -566,7 +562,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = io.github.keqiongpan.QPChainable;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -589,7 +584,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = io.github.keqiongpan.QPChainable;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
