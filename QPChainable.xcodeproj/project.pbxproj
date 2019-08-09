@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1BE5908022F2D3E1005C98F3 /* Core.h in Headers */ = {isa = PBXBuildFile; fileRef = 1BE5907F22F2D37B005C98F3 /* Core.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1BE5908122F2D3E1005C98F3 /* Core.h in Headers */ = {isa = PBXBuildFile; fileRef = 1BE5907F22F2D37B005C98F3 /* Core.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1BE5908222F2D3E2005C98F3 /* Core.h in Headers */ = {isa = PBXBuildFile; fileRef = 1BE5907F22F2D37B005C98F3 /* Core.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1BE5908322F2D3E2005C98F3 /* Core.h in Headers */ = {isa = PBXBuildFile; fileRef = 1BE5907F22F2D37B005C98F3 /* Core.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1BE5908522F2D8E7005C98F3 /* Utilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 1BE5908422F2D8E6005C98F3 /* Utilities.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1BE5908622F2D8E7005C98F3 /* Utilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 1BE5908422F2D8E6005C98F3 /* Utilities.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1BE5908722F2D8E7005C98F3 /* Utilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 1BE5908422F2D8E6005C98F3 /* Utilities.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1BE5908822F2D8E7005C98F3 /* Utilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 1BE5908422F2D8E6005C98F3 /* Utilities.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1BEED82A22A7C2C8001CDBC0 /* QPChainable.h in Headers */ = {isa = PBXBuildFile; fileRef = 1BEED82822A7C2C8001CDBC0 /* QPChainable.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1BEED84122A91485001CDBC0 /* QPChainable.h in Headers */ = {isa = PBXBuildFile; fileRef = 1BEED82822A7C2C8001CDBC0 /* QPChainable.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1BEED84C22A91A04001CDBC0 /* QPChainable.h in Headers */ = {isa = PBXBuildFile; fileRef = 1BEED82822A7C2C8001CDBC0 /* QPChainable.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -14,6 +22,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1BE5907F22F2D37B005C98F3 /* Core.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Core.h; sourceTree = "<group>"; };
+		1BE5908422F2D8E6005C98F3 /* Utilities.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Utilities.h; sourceTree = "<group>"; };
 		1BEED82522A7C2C8001CDBC0 /* QPChainable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = QPChainable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BEED82822A7C2C8001CDBC0 /* QPChainable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QPChainable.h; sourceTree = "<group>"; };
 		1BEED82922A7C2C8001CDBC0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -77,6 +87,8 @@
 			isa = PBXGroup;
 			children = (
 				1BEED82822A7C2C8001CDBC0 /* QPChainable.h */,
+				1BE5907F22F2D37B005C98F3 /* Core.h */,
+				1BE5908422F2D8E6005C98F3 /* Utilities.h */,
 				1BEED82922A7C2C8001CDBC0 /* Info.plist */,
 			);
 			path = QPChainable;
@@ -89,7 +101,9 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1BE5908522F2D8E7005C98F3 /* Utilities.h in Headers */,
 				1BEED82A22A7C2C8001CDBC0 /* QPChainable.h in Headers */,
+				1BE5908022F2D3E1005C98F3 /* Core.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,7 +111,9 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1BE5908622F2D8E7005C98F3 /* Utilities.h in Headers */,
 				1BEED84122A91485001CDBC0 /* QPChainable.h in Headers */,
+				1BE5908122F2D3E1005C98F3 /* Core.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -105,7 +121,9 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1BE5908722F2D8E7005C98F3 /* Utilities.h in Headers */,
 				1BEED84C22A91A04001CDBC0 /* QPChainable.h in Headers */,
+				1BE5908222F2D3E2005C98F3 /* Core.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -113,7 +131,9 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1BE5908822F2D8E7005C98F3 /* Utilities.h in Headers */,
 				1BEED85722A91BE9001CDBC0 /* QPChainable.h in Headers */,
+				1BE5908322F2D3E2005C98F3 /* Core.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
