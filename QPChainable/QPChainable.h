@@ -8,3 +8,4 @@
 
 #import <QPChainable/Core.h>
 #import <QPChainable/Utilities.h>
+#import <QPChainable/DecoratorPattern.h>
