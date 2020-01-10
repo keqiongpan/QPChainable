@@ -15,6 +15,8 @@
 		1B45560022FD16A2008BA2E2 /* DecoratorPattern.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B4555F822FD16A2008BA2E2 /* DecoratorPattern.m */; };
 		1B45560122FD16A2008BA2E2 /* DecoratorPattern.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B4555F822FD16A2008BA2E2 /* DecoratorPattern.m */; };
 		1B45560222FD16A2008BA2E2 /* DecoratorPattern.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B4555F822FD16A2008BA2E2 /* DecoratorPattern.m */; };
+		1B7A448023C821B60009BB68 /* QPChainableTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B7A447F23C821B60009BB68 /* QPChainableTests.m */; };
+		1BB5D5F423C8237D00CD2723 /* QPChainableTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B7A447F23C821B60009BB68 /* QPChainableTests.m */; };
 		1BE5908022F2D3E1005C98F3 /* Core.h in Headers */ = {isa = PBXBuildFile; fileRef = 1BE5907F22F2D37B005C98F3 /* Core.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1BE5908122F2D3E1005C98F3 /* Core.h in Headers */ = {isa = PBXBuildFile; fileRef = 1BE5907F22F2D37B005C98F3 /* Core.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1BE5908222F2D3E2005C98F3 /* Core.h in Headers */ = {isa = PBXBuildFile; fileRef = 1BE5907F22F2D37B005C98F3 /* Core.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -27,11 +29,52 @@
 		1BEED84122A91485001CDBC0 /* QPChainable.h in Headers */ = {isa = PBXBuildFile; fileRef = 1BEED82822A7C2C8001CDBC0 /* QPChainable.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1BEED84C22A91A04001CDBC0 /* QPChainable.h in Headers */ = {isa = PBXBuildFile; fileRef = 1BEED82822A7C2C8001CDBC0 /* QPChainable.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1BEED85722A91BE9001CDBC0 /* QPChainable.h in Headers */ = {isa = PBXBuildFile; fileRef = 1BEED82822A7C2C8001CDBC0 /* QPChainable.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1BFBEF8723C85D0900992053 /* QPChainableTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B7A447F23C821B60009BB68 /* QPChainableTests.m */; };
+		1BFBEF9423C85ECB00992053 /* QPChainableTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B7A447F23C821B60009BB68 /* QPChainableTests.m */; };
+		1BFBEF9F23C85F5700992053 /* QPChainable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BEED85E22A91BE9001CDBC0 /* QPChainable.framework */; };
+		1BFBEFA223C85F6400992053 /* QPChainable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BEED85322A91A04001CDBC0 /* QPChainable.framework */; };
+		1BFBEFA523C85F7100992053 /* QPChainable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BEED84822A91485001CDBC0 /* QPChainable.framework */; };
+		1BFBEFA823C85F8B00992053 /* QPChainable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BEED82522A7C2C8001CDBC0 /* QPChainable.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1BFBEF9D23C85F5200992053 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1BEED81C22A7C2C8001CDBC0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1BEED85522A91BE9001CDBC0;
+			remoteInfo = "QPChainable-watchOS";
+		};
+		1BFBEFA023C85F6100992053 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1BEED81C22A7C2C8001CDBC0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1BEED84A22A91A04001CDBC0;
+			remoteInfo = "QPChainable-tvOS";
+		};
+		1BFBEFA323C85F6E00992053 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1BEED81C22A7C2C8001CDBC0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1BEED83F22A91485001CDBC0;
+			remoteInfo = "QPChainable-macOS";
+		};
+		1BFBEFA623C85F8700992053 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1BEED81C22A7C2C8001CDBC0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1BEED82422A7C2C8001CDBC0;
+			remoteInfo = "QPChainable-iOS";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		1B4555F722FD16A2008BA2E2 /* DecoratorPattern.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DecoratorPattern.h; sourceTree = "<group>"; };
 		1B4555F822FD16A2008BA2E2 /* DecoratorPattern.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DecoratorPattern.m; sourceTree = "<group>"; };
+		1B7A447D23C821B60009BB68 /* QPChainableTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QPChainableTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1B7A447F23C821B60009BB68 /* QPChainableTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QPChainableTests.m; sourceTree = "<group>"; };
+		1B7A448123C821B60009BB68 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1BB5D5FB23C8237D00CD2723 /* QPChainableTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QPChainableTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BE5907F22F2D37B005C98F3 /* Core.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Core.h; sourceTree = "<group>"; };
 		1BE5908422F2D8E6005C98F3 /* Utilities.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Utilities.h; sourceTree = "<group>"; };
 		1BEED82522A7C2C8001CDBC0 /* QPChainable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = QPChainable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -40,9 +83,27 @@
 		1BEED84822A91485001CDBC0 /* QPChainable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = QPChainable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BEED85322A91A04001CDBC0 /* QPChainable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = QPChainable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BEED85E22A91BE9001CDBC0 /* QPChainable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = QPChainable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1BFBEF8E23C85D0900992053 /* QPChainableTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QPChainableTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1BFBEF9B23C85ECB00992053 /* QPChainableTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QPChainableTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		1B7A447A23C821B60009BB68 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1BFBEFA823C85F8B00992053 /* QPChainable.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1BB5D5F523C8237D00CD2723 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1BFBEFA523C85F7100992053 /* QPChainable.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1BEED82222A7C2C8001CDBC0 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -71,14 +132,41 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		1BFBEF8823C85D0900992053 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1BFBEFA223C85F6400992053 /* QPChainable.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1BFBEF9523C85ECB00992053 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1BFBEF9F23C85F5700992053 /* QPChainable.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1B7A447E23C821B60009BB68 /* QPChainableTests */ = {
+			isa = PBXGroup;
+			children = (
+				1B7A447F23C821B60009BB68 /* QPChainableTests.m */,
+				1B7A448123C821B60009BB68 /* Info.plist */,
+			);
+			path = QPChainableTests;
+			sourceTree = "<group>";
+		};
 		1BEED81B22A7C2C8001CDBC0 = {
 			isa = PBXGroup;
 			children = (
 				1BEED82722A7C2C8001CDBC0 /* QPChainable */,
+				1B7A447E23C821B60009BB68 /* QPChainableTests */,
 				1BEED82622A7C2C8001CDBC0 /* Products */,
+				1BFBEF7F23C8241200992053 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -89,6 +177,10 @@
 				1BEED84822A91485001CDBC0 /* QPChainable.framework */,
 				1BEED85322A91A04001CDBC0 /* QPChainable.framework */,
 				1BEED85E22A91BE9001CDBC0 /* QPChainable.framework */,
+				1B7A447D23C821B60009BB68 /* QPChainableTests.xctest */,
+				1BB5D5FB23C8237D00CD2723 /* QPChainableTests.xctest */,
+				1BFBEF8E23C85D0900992053 /* QPChainableTests.xctest */,
+				1BFBEF9B23C85ECB00992053 /* QPChainableTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -104,6 +196,13 @@
 				1BEED82922A7C2C8001CDBC0 /* Info.plist */,
 			);
 			path = QPChainable;
+			sourceTree = "<group>";
+		};
+		1BFBEF7F23C8241200992053 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -156,6 +255,42 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		1B7A447C23C821B60009BB68 /* QPChainableTests-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1B7A448723C821B60009BB68 /* Build configuration list for PBXNativeTarget "QPChainableTests-iOS" */;
+			buildPhases = (
+				1B7A447923C821B60009BB68 /* Sources */,
+				1B7A447A23C821B60009BB68 /* Frameworks */,
+				1B7A447B23C821B60009BB68 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1BFBEFA723C85F8700992053 /* PBXTargetDependency */,
+			);
+			name = "QPChainableTests-iOS";
+			productName = QPChainableTests;
+			productReference = 1B7A447D23C821B60009BB68 /* QPChainableTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		1BB5D5F023C8237D00CD2723 /* QPChainableTests-macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1BB5D5F823C8237D00CD2723 /* Build configuration list for PBXNativeTarget "QPChainableTests-macOS" */;
+			buildPhases = (
+				1BB5D5F323C8237D00CD2723 /* Sources */,
+				1BB5D5F523C8237D00CD2723 /* Frameworks */,
+				1BB5D5F723C8237D00CD2723 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1BFBEFA423C85F6E00992053 /* PBXTargetDependency */,
+			);
+			name = "QPChainableTests-macOS";
+			productName = QPChainableTests;
+			productReference = 1BB5D5FB23C8237D00CD2723 /* QPChainableTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		1BEED82422A7C2C8001CDBC0 /* QPChainable-iOS */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1BEED82D22A7C2C8001CDBC0 /* Build configuration list for PBXNativeTarget "QPChainable-iOS" */;
@@ -228,6 +363,42 @@
 			productReference = 1BEED85E22A91BE9001CDBC0 /* QPChainable.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		1BFBEF8323C85D0900992053 /* QPChainableTests-tvOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1BFBEF8B23C85D0900992053 /* Build configuration list for PBXNativeTarget "QPChainableTests-tvOS" */;
+			buildPhases = (
+				1BFBEF8623C85D0900992053 /* Sources */,
+				1BFBEF8823C85D0900992053 /* Frameworks */,
+				1BFBEF8A23C85D0900992053 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1BFBEFA123C85F6100992053 /* PBXTargetDependency */,
+			);
+			name = "QPChainableTests-tvOS";
+			productName = QPChainableTests;
+			productReference = 1BFBEF8E23C85D0900992053 /* QPChainableTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		1BFBEF9023C85ECB00992053 /* QPChainableTests-watchOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1BFBEF9823C85ECB00992053 /* Build configuration list for PBXNativeTarget "QPChainableTests-watchOS" */;
+			buildPhases = (
+				1BFBEF9323C85ECB00992053 /* Sources */,
+				1BFBEF9523C85ECB00992053 /* Frameworks */,
+				1BFBEF9723C85ECB00992053 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1BFBEF9E23C85F5200992053 /* PBXTargetDependency */,
+			);
+			name = "QPChainableTests-watchOS";
+			productName = QPChainableTests;
+			productReference = 1BFBEF9B23C85ECB00992053 /* QPChainableTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -237,6 +408,9 @@
 				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = "Qiongpan Ke";
 				TargetAttributes = {
+					1B7A447C23C821B60009BB68 = {
+						CreatedOnToolsVersion = 11.3;
+					};
 					1BEED82422A7C2C8001CDBC0 = {
 						CreatedOnToolsVersion = 10.2.1;
 					};
@@ -255,14 +429,32 @@
 			projectRoot = "";
 			targets = (
 				1BEED82422A7C2C8001CDBC0 /* QPChainable-iOS */,
+				1B7A447C23C821B60009BB68 /* QPChainableTests-iOS */,
 				1BEED83F22A91485001CDBC0 /* QPChainable-macOS */,
+				1BB5D5F023C8237D00CD2723 /* QPChainableTests-macOS */,
 				1BEED84A22A91A04001CDBC0 /* QPChainable-tvOS */,
+				1BFBEF8323C85D0900992053 /* QPChainableTests-tvOS */,
 				1BEED85522A91BE9001CDBC0 /* QPChainable-watchOS */,
+				1BFBEF9023C85ECB00992053 /* QPChainableTests-watchOS */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		1B7A447B23C821B60009BB68 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1BB5D5F723C8237D00CD2723 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1BEED82322A7C2C8001CDBC0 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -291,9 +483,39 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		1BFBEF8A23C85D0900992053 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1BFBEF9723C85ECB00992053 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		1B7A447923C821B60009BB68 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1B7A448023C821B60009BB68 /* QPChainableTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1BB5D5F323C8237D00CD2723 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1BB5D5F423C8237D00CD2723 /* QPChainableTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1BEED82122A7C2C8001CDBC0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -326,9 +548,112 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		1BFBEF8623C85D0900992053 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1BFBEF8723C85D0900992053 /* QPChainableTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1BFBEF9323C85ECB00992053 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1BFBEF9423C85ECB00992053 /* QPChainableTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		1BFBEF9E23C85F5200992053 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1BEED85522A91BE9001CDBC0 /* QPChainable-watchOS */;
+			targetProxy = 1BFBEF9D23C85F5200992053 /* PBXContainerItemProxy */;
+		};
+		1BFBEFA123C85F6100992053 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1BEED84A22A91A04001CDBC0 /* QPChainable-tvOS */;
+			targetProxy = 1BFBEFA023C85F6100992053 /* PBXContainerItemProxy */;
+		};
+		1BFBEFA423C85F6E00992053 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1BEED83F22A91485001CDBC0 /* QPChainable-macOS */;
+			targetProxy = 1BFBEFA323C85F6E00992053 /* PBXContainerItemProxy */;
+		};
+		1BFBEFA723C85F8700992053 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1BEED82422A7C2C8001CDBC0 /* QPChainable-iOS */;
+			targetProxy = 1BFBEFA623C85F8700992053 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		1B7A448523C821B60009BB68 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = QPChainableTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.keqiongpan.QPChainableTests;
+				PRODUCT_NAME = QPChainableTests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1B7A448623C821B60009BB68 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = QPChainableTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.keqiongpan.QPChainableTests;
+				PRODUCT_NAME = QPChainableTests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		1BB5D5F923C8237D00CD2723 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = QPChainableTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.keqiongpan.QPChainableTests;
+				PRODUCT_NAME = QPChainableTests;
+				SDKROOT = macosx;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1BB5D5FA23C8237D00CD2723 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = QPChainableTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.keqiongpan.QPChainableTests;
+				PRODUCT_NAME = QPChainableTests;
+				SDKROOT = macosx;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		1BEED82B22A7C2C8001CDBC0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -361,7 +686,6 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
@@ -386,7 +710,6 @@
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_NAME = QPChainable;
 				TVOS_DEPLOYMENT_TARGET = 9.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -426,7 +749,6 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -444,7 +766,6 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
-				PRODUCT_NAME = QPChainable;
 				TVOS_DEPLOYMENT_TARGET = 9.0;
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -456,8 +777,6 @@
 		1BEED82E22A7C2C8001CDBC0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -470,6 +789,7 @@
 					"@loader_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = io.github.keqiongpan.QPChainable;
+				PRODUCT_NAME = QPChainable;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -479,8 +799,6 @@
 		1BEED82F22A7C2C8001CDBC0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -493,6 +811,7 @@
 					"@loader_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = io.github.keqiongpan.QPChainable;
+				PRODUCT_NAME = QPChainable;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -502,8 +821,6 @@
 		1BEED84622A91485001CDBC0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -516,6 +833,7 @@
 					"@loader_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = io.github.keqiongpan.QPChainable;
+				PRODUCT_NAME = QPChainable;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 			};
@@ -524,8 +842,6 @@
 		1BEED84722A91485001CDBC0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -538,6 +854,7 @@
 					"@loader_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = io.github.keqiongpan.QPChainable;
+				PRODUCT_NAME = QPChainable;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 			};
@@ -546,8 +863,6 @@
 		1BEED85122A91A04001CDBC0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -560,6 +875,7 @@
 					"@loader_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = io.github.keqiongpan.QPChainable;
+				PRODUCT_NAME = QPChainable;
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
 			};
@@ -568,8 +884,6 @@
 		1BEED85222A91A04001CDBC0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -582,6 +896,7 @@
 					"@loader_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = io.github.keqiongpan.QPChainable;
+				PRODUCT_NAME = QPChainable;
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
 			};
@@ -590,8 +905,6 @@
 		1BEED85C22A91BE9001CDBC0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -604,6 +917,7 @@
 					"@loader_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = io.github.keqiongpan.QPChainable;
+				PRODUCT_NAME = QPChainable;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 			};
@@ -612,8 +926,6 @@
 		1BEED85D22A91BE9001CDBC0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -626,14 +938,97 @@
 					"@loader_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = io.github.keqiongpan.QPChainable;
+				PRODUCT_NAME = QPChainable;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		1BFBEF8C23C85D0900992053 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = QPChainableTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.keqiongpan.QPChainableTests;
+				PRODUCT_NAME = QPChainableTests;
+				SDKROOT = appletvos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1BFBEF8D23C85D0900992053 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = QPChainableTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.keqiongpan.QPChainableTests;
+				PRODUCT_NAME = QPChainableTests;
+				SDKROOT = appletvos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		1BFBEF9923C85ECB00992053 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = QPChainableTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.keqiongpan.QPChainableTests;
+				PRODUCT_NAME = QPChainableTests;
+				SDKROOT = watchos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1BFBEF9A23C85ECB00992053 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = QPChainableTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.keqiongpan.QPChainableTests;
+				PRODUCT_NAME = QPChainableTests;
+				SDKROOT = watchos;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		1B7A448723C821B60009BB68 /* Build configuration list for PBXNativeTarget "QPChainableTests-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1B7A448523C821B60009BB68 /* Debug */,
+				1B7A448623C821B60009BB68 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1BB5D5F823C8237D00CD2723 /* Build configuration list for PBXNativeTarget "QPChainableTests-macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1BB5D5F923C8237D00CD2723 /* Debug */,
+				1BB5D5FA23C8237D00CD2723 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		1BEED81F22A7C2C8001CDBC0 /* Build configuration list for PBXProject "QPChainable" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -675,6 +1070,24 @@
 			buildConfigurations = (
 				1BEED85C22A91BE9001CDBC0 /* Debug */,
 				1BEED85D22A91BE9001CDBC0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1BFBEF8B23C85D0900992053 /* Build configuration list for PBXNativeTarget "QPChainableTests-tvOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1BFBEF8C23C85D0900992053 /* Debug */,
+				1BFBEF8D23C85D0900992053 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1BFBEF9823C85ECB00992053 /* Build configuration list for PBXNativeTarget "QPChainableTests-watchOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1BFBEF9923C85ECB00992053 /* Debug */,
+				1BFBEF9A23C85ECB00992053 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
