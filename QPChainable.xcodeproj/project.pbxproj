@@ -29,6 +29,10 @@
 		1BEED84122A91485001CDBC0 /* QPChainable.h in Headers */ = {isa = PBXBuildFile; fileRef = 1BEED82822A7C2C8001CDBC0 /* QPChainable.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1BEED84C22A91A04001CDBC0 /* QPChainable.h in Headers */ = {isa = PBXBuildFile; fileRef = 1BEED82822A7C2C8001CDBC0 /* QPChainable.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1BEED85722A91BE9001CDBC0 /* QPChainable.h in Headers */ = {isa = PBXBuildFile; fileRef = 1BEED82822A7C2C8001CDBC0 /* QPChainable.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1BF3A1FD23C87E30008B4EE5 /* CoreTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BF3A1FC23C87E30008B4EE5 /* CoreTests.m */; };
+		1BF3A1FE23C87E30008B4EE5 /* CoreTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BF3A1FC23C87E30008B4EE5 /* CoreTests.m */; };
+		1BF3A1FF23C87E30008B4EE5 /* CoreTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BF3A1FC23C87E30008B4EE5 /* CoreTests.m */; };
+		1BF3A20023C87E30008B4EE5 /* CoreTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BF3A1FC23C87E30008B4EE5 /* CoreTests.m */; };
 		1BFBEF8723C85D0900992053 /* QPChainableTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B7A447F23C821B60009BB68 /* QPChainableTests.m */; };
 		1BFBEF9423C85ECB00992053 /* QPChainableTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B7A447F23C821B60009BB68 /* QPChainableTests.m */; };
 		1BFBEF9F23C85F5700992053 /* QPChainable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BEED85E22A91BE9001CDBC0 /* QPChainable.framework */; };
@@ -83,6 +87,7 @@
 		1BEED84822A91485001CDBC0 /* QPChainable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = QPChainable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BEED85322A91A04001CDBC0 /* QPChainable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = QPChainable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BEED85E22A91BE9001CDBC0 /* QPChainable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = QPChainable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1BF3A1FC23C87E30008B4EE5 /* CoreTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoreTests.m; sourceTree = "<group>"; };
 		1BFBEF8E23C85D0900992053 /* QPChainableTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QPChainableTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BFBEF9B23C85ECB00992053 /* QPChainableTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QPChainableTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -155,6 +160,7 @@
 			isa = PBXGroup;
 			children = (
 				1B7A447F23C821B60009BB68 /* QPChainableTests.m */,
+				1BF3A1FC23C87E30008B4EE5 /* CoreTests.m */,
 				1B7A448123C821B60009BB68 /* Info.plist */,
 			);
 			path = QPChainableTests;
@@ -504,6 +510,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1BF3A1FD23C87E30008B4EE5 /* CoreTests.m in Sources */,
 				1B7A448023C821B60009BB68 /* QPChainableTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -512,6 +519,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1BF3A1FE23C87E30008B4EE5 /* CoreTests.m in Sources */,
 				1BB5D5F423C8237D00CD2723 /* QPChainableTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -552,6 +560,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1BF3A1FF23C87E30008B4EE5 /* CoreTests.m in Sources */,
 				1BFBEF8723C85D0900992053 /* QPChainableTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -560,6 +569,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1BF3A20023C87E30008B4EE5 /* CoreTests.m in Sources */,
 				1BFBEF9423C85ECB00992053 /* QPChainableTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
